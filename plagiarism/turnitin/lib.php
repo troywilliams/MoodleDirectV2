@@ -1553,7 +1553,7 @@ class plagiarism_plugin_turnitin extends plagiarism_plugin {
                         mtrace('User:  '.$user->id.' - '.$user->firstname.' '.$user->lastname.' ('.$user->email.')');
                         mtrace('Course Module: '.$cm->id.'');
                         mtrace('-------------------------');
-                        return false;
+                        //return false; UOW disabled so submissions don't get held up.
                     }
 
                     $tiiassignmentid = $this->sync_tii_assignment($cm, $coursedata->turnitin_cid);
